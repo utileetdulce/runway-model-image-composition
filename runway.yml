@@ -1,4 +1,4 @@
-version: 0.1
+version: 0.2
 python: 3.6
 entrypoint: python runway_model.py
 spec:
