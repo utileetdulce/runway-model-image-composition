@@ -11,7 +11,7 @@ def setup(opts):
                 inputs={ 'background': image(channels=3), 'foreground': image(channels=4) },
                 outputs={ 'composition': image(channels=3) },
                 description='Generates a composition of the two input images')
-def generate(model, args):
+def composite(model, args):
     output_image = model.run_on_input(args['background'],args['foreground'])
     return {
         'composition': output_image
