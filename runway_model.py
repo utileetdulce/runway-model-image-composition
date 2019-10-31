@@ -8,7 +8,7 @@ def setup(opts):
     return model
 
 @runway.command(name='composite',
-                inputs={ 'background': image(channels=3), 'foreground': image(channels=4) },
+                inputs={ 'background': image(channels=4), 'foreground': image(channels=4) },
                 outputs={ 'composition': image(channels=3) },
                 description='Generates a composition of the two input images')
 def composite(model, args):
@@ -18,5 +18,5 @@ def composite(model, args):
     }
 
 if __name__ == '__main__':
-    runway.run(host='0.0.0.0', port=9000)
+    runway.run(host='0.0.0.0', port=9001)
 
